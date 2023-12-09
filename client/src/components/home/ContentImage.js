@@ -7,7 +7,7 @@ const ContentImageData = [
     title: 'Stake FIL and rewards',
     content: 'Got FIL? stake and watch your FIL grow.',
     align: 'right',
-    image: '/stk.png',
+    image: 'https://res.cloudinary.com/amznpersonal1/image/upload/v1702181247/wfkhye1ejmxqcusezzyl.png',
   },
   {
     id: uuid(),
@@ -15,7 +15,7 @@ const ContentImageData = [
     content:
       'Got Storage but cant stake? Request for funds to stake your storage!',
     align: 'left',
-    image: '/loan.png',
+    image: 'https://res.cloudinary.com/amznpersonal1/image/upload/v1702181247/wfkhye1ejmxqcusezzyl.png',
   },
   {
     id: uuid(),
@@ -23,7 +23,7 @@ const ContentImageData = [
     content:
       'Worried about collateral? Know what the network thinks of you.',
     align: 'right',
-    image: '/onchain reputation cal.png',
+    image: 'https://res.cloudinary.com/amznpersonal1/image/upload/v1702181246/ebc4zgnu5bmlmjyjr7ji.png',
   },
 ];
 
