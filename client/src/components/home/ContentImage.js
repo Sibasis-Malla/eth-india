@@ -4,24 +4,24 @@ import { v4 as uuid } from 'uuid';
 const ContentImageData = [
   {
     id: uuid(),
-    title: 'Stake FIL',
-    content: 'Select an amount of FIL to stake on Collectif DAO application.',
+    title: 'Stake FIL and rewards',
+    content: 'Got FIL? stake and watch your FIL grow.',
     align: 'right',
     image: '/stk.png',
   },
   {
     id: uuid(),
-    title: 'Receive Rewards',
+    title: 'Loans',
     content:
-      'Receive clFIL which automatically increases in value from Filecoin mining rewards',
+      'Got Storage but cant stake? Request for funds to stake your storage!',
     align: 'left',
     image: '/loan.png',
   },
   {
     id: uuid(),
-    title: 'Expand Network',
+    title: 'Reputation',
     content:
-      'Help growing Filecoin with storage capacity by allocating FIL to network’s top Storage Providers',
+      'Worried about collateral? Know what the network thinks of you.',
     align: 'right',
     image: '/onchain reputation cal.png',
   },

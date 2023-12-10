@@ -24,6 +24,7 @@ const StorageProvider = () => {
   const handleLoanAmount = (e)=>{
     setLoan(e.target.value)
   }
+  // const handleOnboard = 
   const handlerequest = ()=>{
     const balance = web3.utils.toWei(loan, "ether");
     request(_StorageContract,account.currentAccount,balance).then(()=>{
@@ -236,14 +237,14 @@ const StorageProvider = () => {
             {handleForm(formID)}
           </>
         ) : (
+          <>
           <ButtonGroup className="block">
             <div
               onClick={() => {
-                // register(_StorageContract,account.currentAccount).then(()=>{
-                //   alert("Succesfully registered")
-                // }
-                // )
-                setisRegistered(true)
+                register(_StorageContract,account.currentAccount).then(()=>{
+                  alert("Succesfully registered")
+                }
+                )
               }}
               className="ml-4 inline-flex w-full cursor-pointer items-center justify-center gap-3 whitespace-nowrap rounded-lg bg-gradient-to-r from-[#01ACE4] via-[#00C1BD] to-[#00FFFA] px-8 py-2 text-3xl font-semibold text-black transition-colors duration-300 hover:bg-secondary-500 md:w-auto"
             >
@@ -251,6 +252,18 @@ const StorageProvider = () => {
               Onboard as a Storage Provider
             </div>
           </ButtonGroup>
+          <ButtonGroup className="block mt-4">
+          <div
+            onClick={() => {
+              setisRegistered(true)
+            }}
+            className="ml-4 inline-flex w-full cursor-pointer items-center justify-center gap-3 whitespace-nowrap rounded-lg bg-gradient-to-r from-[#01ACE4] via-[#00C1BD] to-[#00FFFA] px-8 py-2 text-3xl font-semibold text-black transition-colors duration-300 hover:bg-secondary-500 md:w-auto"
+          >
+            Go to next
+            <FontAwesomeIcon icon={faArrowRight} />
+          </div>
+        </ButtonGroup>
+        </>
         )}
       </div>
     </Layout>

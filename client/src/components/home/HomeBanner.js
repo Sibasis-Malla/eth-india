@@ -15,8 +15,7 @@ export const HomeBanner = () => {
         {/* Appear Second */}
         <MotionBTTContainer transition={{ delay: 0.4, duration: 0.5 }}>
           <PageTitle className="mx-auto text-center text-white" type="heavy">
-            The effortless way to lend the storage with exchange of Reputation
-            Score.
+          Where liquid staking meets storage
           </PageTitle>
         </MotionBTTContainer>
         {/* Appear Third */}
@@ -26,8 +25,7 @@ export const HomeBanner = () => {
             alignment="center"
           >
             <p>
-              Streamline your storage lending and achieve your product goals
-              with ease.{' '}
+            Streamling your storage needs with the help of liquid pool{' '}
             </p>
           </Content>
           <div className="mb-16 mt-6 flex items-center justify-center text-center">
