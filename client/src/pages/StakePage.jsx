@@ -1,25 +1,26 @@
-import React, { useState, useContext, useEffect } from 'react';
-import StakeLayout from '../components/Layout/StakeLayout';
-import { ButtonGroup } from '../components/Button';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Web3Context from '../contexts';
+import React, { useState, useContext, useEffect } from "react";
+import StakeLayout from "../components/Layout/StakeLayout";
+import { ButtonGroup } from "../components/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import Web3Context from "../contexts";
 import {
   faArrowsRotate,
   faRetweet,
   faWallet,
-} from '@fortawesome/free-solid-svg-icons';
+} from "@fortawesome/free-solid-svg-icons";
 import {
   PreviewSwap,
   PreviewSharesSwap,
-} from '../contexts/useContract/readContract';
-import { stake, unStake } from '../contexts/useContract/writeContract';
-import Web3 from 'web3';
-import axios from 'axios';
+} from "../contexts/useContract/readContract";
+import { stake, unStake } from "../contexts/useContract/writeContract";
+import Web3 from "web3";
+import axios from "axios";
 
 const StakePage = () => {
   const web3 = new Web3(window.ethereum);
-  const [state, setState] = useState('Stake');
-  const stakeStates = ['Stake', 'Unstake'];
+  const [state, setState] = useState("Stake");
+  const stakeStates = ["Stake", "Unstake"];
   const [stakeFIL, setstakeFIL] = useState(0);
   const [stakepFIL, setstakepFIL] = useState(0);
   const [FILamount, setFILamount] = useState(0);
@@ -28,13 +29,13 @@ const StakePage = () => {
   const { account, balance, pFIL, _Pool } = useContext(Web3Context);
 
   const coinToAddress = {
-    USDC: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d',
-    DAI: '0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3',
-    FUEL: '0x2090c8295769791ab7a3cf1cc6e0aa19f35e441a',
+    USDC: "0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d",
+    DAI: "0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3",
+    FUEL: "0x2090c8295769791ab7a3cf1cc6e0aa19f35e441a",
   };
 
   const handleChangeFIL = async (e) => {
-    const balance = web3.utils.toWei(e.target.value, 'ether');
+    const balance = web3.utils.toWei(e.target.value, "ether");
     setFILamount(balance);
     setstakeFIL(e.target.value);
     const res = await PreviewSwap(_Pool, e.target.value);
@@ -42,7 +43,7 @@ const StakePage = () => {
   };
 
   const handleChangepFIL = async (e) => {
-    const balance = web3.utils.toWei(e.target.value, 'ether');
+    const balance = web3.utils.toWei(e.target.value, "ether");
     setpFILamount(balance);
     setstakepFIL(e.target.value);
     const res = await PreviewSharesSwap(_Pool, e.target.value);
@@ -57,7 +58,12 @@ const StakePage = () => {
     <StakeLayout>
       <div className="borderz-10 relative flex min-h-screen flex-col items-center justify-center bg-bgsecondary pb-20 pt-20 ">
         {swapState && (
-          <div className="fixed z-10 flex h-screen  w-screen items-center justify-center bg-black/50 backdrop-blur-sm">
+          <div
+            className="fixed z-10 flex h-screen  w-screen items-center justify-center bg-black/50 backdrop-blur-sm"
+            onDoubleClick={() => {
+              setSwapState(false);
+            }}
+          >
             <CurrencyExchange
               coinData={coinToAddress}
               account={account.currentAccount}
@@ -71,7 +77,7 @@ const StakePage = () => {
               <div
                 key={`${stake}-${index}`}
                 className={` col-span-1 w-full transform cursor-pointer text-center text-[20px] text-white transition-transform duration-100 active:scale-50 ${
-                  state === stake ? 'w-1/2 rounded-lg bg-bgsecondary' : ``
+                  state === stake ? "w-1/2 rounded-lg bg-bgsecondary" : ``
                 }`}
                 onClick={() => {
                   setState(stake);
@@ -118,7 +124,7 @@ const StakePage = () => {
                 icon={faArrowsRotate}
                 className="mr-2 transform transition duration-500 ease-in-out hover:rotate-180"
               />
-              Swap
+              Out of FIL? Get some!
             </button>
           </div>
 
@@ -141,7 +147,7 @@ const StakePage = () => {
           </div> */}
           <div
             className={`flex w-full  ${
-              state === 'Stake' ? 'flex-col' : 'flex-col-reverse'
+              state === "Stake" ? "flex-col" : "flex-col-reverse"
             } items-center justify-center`}
           >
             <div className="mt-4 w-full">
@@ -164,8 +170,8 @@ const StakePage = () => {
                     id="stake"
                     value={stakeFIL}
                     class="mr-3 block w-[100px] rounded-lg bg-transparent p-2.5 text-[17px] text-gray-900 text-white focus:border-none focus:bg-transparent focus:text-white"
-                    placeholder={`0 ${state === 'Stake' ? 'FIL' : 'stFIL'}`}
-                    disabled={state === 'Stake' ? false : true}
+                    placeholder={`0 ${state === "Stake" ? "FIL" : "stFIL"}`}
+                    disabled={state === "Stake" ? false : true}
                   />
                 </div>
               </div>
@@ -185,8 +191,8 @@ const StakePage = () => {
                     value={stakepFIL}
                     onChange={handleChangepFIL}
                     class="mr-3 block w-[100px] rounded-lg bg-transparent p-2.5 text-[17px] text-gray-900 text-white focus:border-none focus:bg-transparent focus:text-white"
-                    placeholder={`0 ${state === 'Stake' ? 'stFIL' : 'FIL'}`}
-                    disabled={state === 'Stake' ? true : false}
+                    placeholder={`0 ${state === "Stake" ? "stFIL" : "FIL"}`}
+                    disabled={state === "Stake" ? true : false}
                   />
                 </div>
               </div>
@@ -195,13 +201,13 @@ const StakePage = () => {
           <ButtonGroup className="w-full">
             <p
               onClick={() => {
-                state === 'Stake'
+                state === "Stake"
                   ? stake(_Pool, account.currentAccount, FILamount).then(() => {
-                      alert('Staked Successfully!');
+                      alert("Staked Successfully!");
                     })
                   : unStake(_Pool, account.currentAccount, pFILamount).then(
                       () => {
-                        alert('Unstake Succesful !');
+                        alert("Unstake Succesful !");
                       }
                     );
               }}
@@ -241,16 +247,16 @@ const CurrencyExchange = ({ coinData, account, setSwapState }) => {
   const [coinAddr, setcoinAddr] = useState(coinData[Object.keys(coinData)[0]]);
   const [amount, setamount] = useState(0);
   const [isAlert, setisAlert] = useState(false);
-  const [error, seterror] = useState('');
+  const [error, seterror] = useState("");
 
   const swap = async () => {
     // try {
     const response = await axios({
-      method: 'get',
+      method: "get",
       url: `https://backend-inc.onrender.com/swap?accountAddress=${account}&srcCoinAddr=${coinAddr}&amt=${amount}`,
       withCredentials: false,
       params: {
-        access_token: '4WyjmE36P9R1UQDLFrszynHOkM4d15mW',
+        access_token: "4WyjmE36P9R1UQDLFrszynHOkM4d15mW",
       },
     });
 
@@ -360,6 +366,12 @@ const CurrencyExchange = ({ coinData, account, setSwapState }) => {
           >
             <FontAwesomeIcon icon={faWallet} />
             Convert
+          </div>
+          <div className=" w-full items-center justify-center text-white-50 text-base ">
+            <div className=" flex items-center justify-center mt-6">
+              Powered By
+              <img src="./oneinch.png" alt="1inch" className="h-10 w-10 bg-white-50 rounded-full px-1 py-1 ml-4" />
+            </div>
           </div>
         </div>
       </div>

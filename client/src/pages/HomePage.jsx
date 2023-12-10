@@ -31,19 +31,18 @@ const HomePage = () => {
                 className="mx-auto text-center text-white"
                 type="default"
               >
-                How to get started?
+                Features
               </PageTitle>
               <Content
                 className="mt-5 text-center !text-[14px] text-secondary-200 opacity-50"
                 alignment="center"
               >
-                Hey there! Welcome to Storeoli, follow these steps to get
-                started with ease with the platform:
+                Hey there! Explore more to know what we got in here!
               </Content>
               <ContentImage />
             </SectionContainer>
           </MotionBTTContainer>
-          {/* Card Container Tabs */}
+          {/* Card Container Tabs
           <MotionBTTContainer transition={{ delay: 0.2, duration: 0.5 }}>
             <SectionContainer className="feature-tabs flex flex-col items-center justify-center">
               <PageTitle
@@ -62,7 +61,7 @@ const HomePage = () => {
                 </p>
               </Content>
             </SectionContainer>
-          </MotionBTTContainer>
+          </MotionBTTContainer> */}
         </SectionContainer>
       </div>
     </Layout>

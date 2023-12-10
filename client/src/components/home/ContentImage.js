@@ -1,29 +1,28 @@
-import { SectionContainer } from '../commons/SectionContainer';
-import { v4 as uuid } from 'uuid';
+import { SectionContainer } from "../commons/SectionContainer";
+import { v4 as uuid } from "uuid";
 
 const ContentImageData = [
   {
     id: uuid(),
-    title: 'Stake FIL',
-    content: 'Select an amount of FIL to stake on Collectif DAO application.',
-    align: 'right',
-    image: '/stk.png',
+    title: "Stake FIL and earn Rewards",
+    content: "Got FIL? stake and watch your FIL grow.",
+    align: "right",
+    image: "/stk.png",
   },
   {
     id: uuid(),
-    title: 'Receive Rewards',
+    title: "Loans",
     content:
-      'Receive clFIL which automatically increases in value from Filecoin mining rewards',
-    align: 'left',
-    image: '/loan.png',
+      "Got Storage but cant stake? Request for funds to stake your storage!",
+    align: "left",
+    image: "/loan.png",
   },
   {
     id: uuid(),
-    title: 'Expand Network',
-    content:
-      'Help growing Filecoin with storage capacity by allocating FIL to network’s top Storage Providers',
-    align: 'right',
-    image: '/onchain reputation cal.png',
+    title: "Reputation",
+    content: "Worried about collateral? Know what the network thinks of you.",
+    align: "right",
+    image: "/onchain reputation cal.png",
   },
 ];
 
@@ -34,7 +33,7 @@ export const ContentImage = () => {
         <div id={item.id} key={item.id} className="grid gap-y-8 md:grid-cols-2">
           <div
             className={`rounded-3xl ${
-              item.align === 'left' ? 'md:order-1' : ''
+              item.align === "left" ? "md:order-1" : ""
             }`}
           >
             <img
@@ -45,17 +44,19 @@ export const ContentImage = () => {
             />
           </div>
           <div
-            className={`flex items-start justify-center flex-col ${
-              item.align === 'left'
-                ? 'ml-auto md:pr-16 lg:pr-24 xl:pr-32'
-                : 'mr-auto md:pl-16 lg:pl-24  xl:pl-32'
+            className={`flex flex-col items-start justify-center ${
+              item.align === "left"
+                ? "ml-auto md:pr-16 lg:pr-24 xl:pr-32"
+                : "mr-auto md:pl-16 lg:pl-24  xl:pl-32"
             } content my-auto text-black/60`}
           >
             <h3 className="md:h3 mb-2 text-[30px] font-semibold text-white">
               {item.title}
             </h3>
             <div className="mt-0 w-36 border-b-4 border-secondary-500"></div>
-            <p className="text-secondary-200 !text-[15px] mt-2 opacity-60">{item.content}</p>
+            <p className="mt-2 !text-[15px] text-secondary-200 opacity-60">
+              {item.content}
+            </p>
           </div>
         </div>
       ))}
