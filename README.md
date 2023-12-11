@@ -1,6 +1,5 @@
+[![All Contributors](https://img.shields.io/github/all-contributors/sambit-sankalp/project-phoenixfi?color=ee8449&style=flat-square)](#contributors)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
-<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <!-- Other badges-->
 
@@ -185,3 +184,14 @@ Implementing checks and balances, such as a beneficiary system, the platform act
 
 <img src="https://res.cloudinary.com/sambitsankalp/image/upload/v1702274331/image1_nxv1ap.png" alt="Logo" width="100%">
 <img src="https://res.cloudinary.com/sambitsankalp/image/upload/v1702274328/image2_ahm19s.png" alt="Logo" width="100%">
+
+## Contributors
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
