@@ -13,7 +13,7 @@ const ContentImageData = [
     id: uuid(),
     title: 'Loans',
     content:
-      'Got Storage but cant stake? Request for funds to stake your storage!',
+      'Got Storage but cant stake? Request for funds to participate in the network !',
     align: 'left',
     image: 'https://res.cloudinary.com/amznpersonal1/image/upload/v1702181247/wfkhye1ejmxqcusezzyl.png',
   },
