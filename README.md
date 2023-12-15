@@ -27,7 +27,7 @@
   <h3 align="center">PhoenixFi</h3>
 
   <p align="center">
-    The official repository for the website of Phoenixi
+    The official repository for the website of Phoenixfi
     <br />
     <a href="https://phoneixfi.vercel.app/">View Live</a>
   </p>
