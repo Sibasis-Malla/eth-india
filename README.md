@@ -1,4 +1,4 @@
-[![All Contributors](https://img.shields.io/github/all-contributors/sambit-sankalp/project-phoenixfi?color=ee8449&style=flat-square)](#contributors)
+<!-- [![All Contributors](https://img.shields.io/github/all-contributors/sambit-sankalp/project-phoenixfi?color=ee8449&style=flat-square)](#contributors) -->
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 <!-- Other badges-->
@@ -53,7 +53,7 @@
     <li><a href="#block-diagram">Block Diagram</a></li>
     <li><a href="#screenshots">Screenshots</a></li>
       <li><a href="#future-scope">Future Scope</a></li>
-    <li><a href="#contributors">Contributors</a></li>
+    <!-- <li><a href="#contributors">Contributors</a></li> -->
   </ol>
 </details>
 
@@ -185,7 +185,7 @@ Implementing checks and balances, such as a beneficiary system, the platform act
 <img src="https://res.cloudinary.com/sambitsankalp/image/upload/v1702274331/image1_nxv1ap.png" alt="Logo" width="100%">
 <img src="https://res.cloudinary.com/sambitsankalp/image/upload/v1702274328/image2_ahm19s.png" alt="Logo" width="100%">
 
-## Contributors
+<!-- ## Contributors -->
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
