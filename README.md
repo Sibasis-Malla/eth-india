@@ -52,7 +52,7 @@
     <li><a href="#features">Features</a></li>
     <li><a href="#block-diagram">Block Diagram</a></li>
     <li><a href="#screenshots">Screenshots</a></li>
-      <li><a href="#future-scope">Future Scope</a></li>
+      <li><a href="#repositories">Repositories</a></li>
     <!-- <li><a href="#contributors">Contributors</a></li> -->
   </ol>
 </details>
@@ -184,6 +184,11 @@ Implementing checks and balances, such as a beneficiary system, the platform act
 
 <img src="https://res.cloudinary.com/sambitsankalp/image/upload/v1702274331/image1_nxv1ap.png" alt="Logo" width="100%">
 <img src="https://res.cloudinary.com/sambitsankalp/image/upload/v1702274328/image2_ahm19s.png" alt="Logo" width="100%">
+
+## Repositories
+
+- [Shell Script to run Lilypad](https://github.com/sambit-sankalp/lilypadscript)
+- [Lilypad Docker Configuration](https://github.com/sambit-sankalp/lilyconfig)
 
 <!-- ## Contributors -->
 
