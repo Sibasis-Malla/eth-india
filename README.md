@@ -20,7 +20,7 @@
 
 <br />
 <p align="center">
-    <img src="https://res.cloudinary.com/amznpersonal1/image/upload/v1703009365/wycfc6lbtnqp1ih3hrvd.png" alt="Logo" width="80">
+    <img src="https://res.cloudinary.com/amznpersonal1/image/upload/v1703009456/i6fmhc8m2apbhn4qxwbm.png" alt="Logo" width="80">
   </a>
 
   <h3 align="center">PhoenixFi</h3>
